@@ -120,3 +120,5 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+extra01/part2/user_bot.py
