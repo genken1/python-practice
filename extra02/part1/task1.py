@@ -1,5 +1,5 @@
 # 1. Преобразовать элементы списка s из строковой в числовую форму.
-def str_to_int(str_s):
+def to_int(str_s):
     return [int(x) for x in str_s]
 
 
@@ -14,7 +14,7 @@ def reverse(s):
 
 
 # 4 .Выдать список индексов, на которых найден элемент x в последовательности s.
-def get_index(x, s):
+def get_all_indices_where_equal_x(x, s):
     return [i for i in range(len(s)) if x == s[i]]
 
 
@@ -24,14 +24,14 @@ def sum_elem_even_index(s):
 
 
 # 6. Найти строку максимальной длины в списке строк s.
-def find_str_max_len(str):
+def find_str_of_max_len(str):
     return max(str, key=len)
 
 
 if __name__ == '__main__':
-    assert str_to_int(["1", "2", "3", "4"]) == [1, 2, 3, 4]
-    assert count_elem(["python", "task", "bonus", "python"]) == 3
-    assert reverse([1, 2, 3, 4, 5]) == [5, 4, 3, 2, 1]
-    assert get_index(7, [0, 7, 1, 7, 7, 2, 7]) == [1, 3, 4, 6]
-    assert sum_elem_even_index([2, -178, -7, 67, 2, 78, 0, 19]) == -14
-    assert find_str_max_len(["bonus", "python", "task", "practice"]) == "practice"
+    assert to_int(["1", "2"]) == [1, 2]
+    assert count_elem(["one", "two"]) == 2
+    assert reverse([1, 2, 3]) == [3, 2, 1]
+    assert get_all_indices_where_equal_x(4, [4, 2, 3, 4, 5]) == [0, 3]
+    assert sum_elem_even_index([1, -1, 2, 3, -5, 6, 7, 8]) == 16
+    assert find_str_of_max_len(["one", "two", "three", "four", "python"]) == "python"
